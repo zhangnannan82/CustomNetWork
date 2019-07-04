@@ -1,2 +1,5 @@
 # CustomNetWork
 网络文件上传、断点下载实现
+
+下载过程NSURLSessionDownloadTask，系统自己处理，在tmp文件夹下，且文件名是系统自己制定的，若不处理，下载完成后系统自动移除掉了
+ AF用的就是NSURLSessionDownloadTask，所以默认是没有断点下载功能的

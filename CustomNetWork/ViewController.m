@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "BreakLoadViewController.h"
+#import "UpdateLoadViewController.h"
+#import "sysDownLoadViewController.h"
 
 @interface ViewController ()
 
@@ -16,9 +19,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
 }
 
+- (IBAction)downLoadAction:(id)sender {
+    BreakLoadViewController *vc = [[BreakLoadViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)updateAction:(id)sender {
+    UpdateLoadViewController *vc = [[UpdateLoadViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)sysDownLoadAction:(id)sender {
+    sysDownLoadViewController *vc = [[sysDownLoadViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
